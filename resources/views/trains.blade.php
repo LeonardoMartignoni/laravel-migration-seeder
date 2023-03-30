@@ -13,10 +13,12 @@
 
 <body>
   <div class="container">
-    <div class="row row-cols-4">
+    <h1 class="my-4">Train list</h1>
+
+    <div class="row row-cols-4 g-4">
       @forelse ($trains as $train)
         <div class="col">
-          <div class="card">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Train {{ $train['train_code'] }}</h5>
               <h6 class="card-subtitle mb-2 text-muted">{{ ucwords($train['departure_station']) }} ->
