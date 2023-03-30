@@ -14,10 +14,7 @@
 <body>
   <div class="container">
     <div class="row row-cols-4">
-      {{-- @foreach ($trains as $train)
-        <p>{{ $train }}</p>
-      @endforeach --}}
-      @foreach ($trains as $train)
+      @forelse ($trains as $train)
         <div class="col">
           <div class="card">
             <div class="card-body">
@@ -36,7 +33,9 @@
             </div> --}}
           </div>
         </div>
-      @endforeach
+      @empty
+        <p>Nessun treno trovato</p>
+      @endforelse
     </div>
   </div>
 
