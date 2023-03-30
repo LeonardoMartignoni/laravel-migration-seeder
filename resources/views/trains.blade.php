@@ -22,13 +22,13 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Train {{ $train['train_code'] }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{{ substr($train['departure_time'], 0, -3) }} ->
-                {{ substr($train['arrival_time'], 0, -3) }}
+              <h6 class="card-subtitle mb-2 text-muted">{{ ucwords($train['departure_station']) }} ->
+                {{ ucwords($train['arrival_station']) }}
               </h6>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">From: {{ ucwords($train['departure_station']) }}</li>
-              <li class="list-group-item">To: {{ ucwords($train['arrival_station']) }}</li>
+              <li class="list-group-item">Departure: {{ substr($train['departure_time'], 0, -3) }}</li>
+              <li class="list-group-item">Arrival: {{ substr($train['arrival_time'], 0, -3) }}</li>
             </ul>
             {{-- <div class="card-body">
               <a href="#" class="card-link">Card link</a>
